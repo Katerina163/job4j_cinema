@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="332d2855-f4c6-414d-b8da-f9aadaf919b2" name="Changes" comment="create" />
+    <list default="true" id="332d2855-f4c6-414d-b8da-f9aadaf919b2" name="Changes" comment="настройка sql" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +19,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="865f0ad0-9cdd-4867-a912-0aa70bf948e9" />
+        <option name="url" value="https://github.com/Katerina163/job4j_cinema.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectId" id="2Omx4lSY1mmKptRKkP0WZ8X3lBN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -35,6 +48,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "7d9b35aad4f0a6878c820620ae095258",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -56,6 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1682179369564</updated>
       <workItem from="1682179370595" duration="404000" />
+      <workItem from="1682224643684" duration="214000" />
     </task>
     <task id="LOCAL-00001" summary="create">
       <created>1682179729265</created>
@@ -64,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682179729265</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="настройка sql">
+      <created>1682224801263</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682224801263</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -72,6 +94,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create" />
-    <option name="LAST_COMMIT_MESSAGE" value="create" />
+    <MESSAGE value="настройка sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="настройка sql" />
   </component>
 </project>
