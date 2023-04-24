@@ -1,8 +1,6 @@
 package ru.job4j.cinema.dto;
 
 public class HallDto {
-
-
     private int maxRow;
     private int maxPlace;
 
