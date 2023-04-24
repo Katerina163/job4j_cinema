@@ -23,7 +23,7 @@ public class SimpleUserService implements UserService {
 
     @Override
     public Optional<User> findByEmail(String email) {
-        return sql2oUserRepository.findById(email);
+        return sql2oUserRepository.findByEmail(email);
     }
 
     @Override

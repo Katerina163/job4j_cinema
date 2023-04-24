@@ -29,7 +29,7 @@ public class Sql2oUserRepository implements UserRepository {
     }
 
     @Override
-    public Optional<User> findById(String email) {
+    public Optional<User> findByEmail(String email) {
         try (var connection = sql2o.open()) {
             var query = connection.createQuery(
                     "SELECT * FROM users WHERE email = :email");
@@ -49,6 +49,17 @@ public class Sql2oUserRepository implements UserRepository {
                     .setColumnMappings(User.COLUMN_MAPPING)
                     .executeAndFetchFirst(User.class);
             return Optional.ofNullable(user);
+        }
+    }
+
+    @Override
+    public boolean deleteById(int id) {
+        try (var connection = sql2o.open()) {
+            var query = connection.createQuery(
+                    "DELETE FROM users WHERE id = :id");
+            query.addParameter("id", id);
+            var affectedRows = query.executeUpdate().getResult();
+            return affectedRows > 0;
         }
     }
 }

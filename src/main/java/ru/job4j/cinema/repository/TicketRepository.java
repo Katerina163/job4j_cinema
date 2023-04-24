@@ -8,4 +8,6 @@ public interface TicketRepository {
     Optional<Ticket> findById(int id);
 
     Optional<Ticket> save(Ticket ticket);
+
+    boolean deleteById(int id);
 }
