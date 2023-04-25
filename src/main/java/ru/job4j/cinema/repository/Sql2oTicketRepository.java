@@ -41,9 +41,8 @@ public class Sql2oTicketRepository implements TicketRepository {
             int generatedId = query.executeUpdate().getKey(Integer.class);
             ticket.setId(generatedId);
             return Optional.ofNullable(ticket);
-        } catch (Exception ex) {
-            return Optional.empty();
-        }
+        } catch (Exception ignored) {}
+        return Optional.empty();
     }
 
     @Override
