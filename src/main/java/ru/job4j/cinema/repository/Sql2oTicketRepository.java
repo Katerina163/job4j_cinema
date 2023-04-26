@@ -10,8 +10,8 @@ import java.util.Optional;
 
 @Repository
 public class Sql2oTicketRepository implements TicketRepository {
-    private final Sql2o sql2o;
     private static final Logger LOG = LogManager.getLogger(Sql2oUserRepository.class.getName());
+    private final Sql2o sql2o;
 
     public Sql2oTicketRepository(Sql2o sql2o) {
         this.sql2o = sql2o;

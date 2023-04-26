@@ -128,6 +128,7 @@ public class Film {
         private int minimalAge;
         private int durationInMinutes;
         private int fileId;
+
         public FilmBuilder addId(int id) {
             this.id = id;
             return this;
