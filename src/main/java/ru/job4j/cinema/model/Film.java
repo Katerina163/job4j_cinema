@@ -24,19 +24,18 @@ public class Film {
     private int durationInMinutes;
     private int fileId;
 
-    public Film() {
-    }
-
-    public Film(int id, String name, String description, int year,
-                int genreId, int minimalAge, int durationInMinutes, int fileId) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.year = year;
-        this.genreId = genreId;
-        this.minimalAge = minimalAge;
-        this.durationInMinutes = durationInMinutes;
-        this.fileId = fileId;
+    private Film(FilmBuilder filmBuilder) {
+        if (filmBuilder == null) {
+            throw new IllegalArgumentException("Пустой FilmBuilder");
+        }
+        this.id = filmBuilder.id;
+        this.name = filmBuilder.name;
+        this.description = filmBuilder.description;
+        this.year = filmBuilder.year;
+        this.genreId = filmBuilder.genreId;
+        this.minimalAge = filmBuilder.minimalAge;
+        this.durationInMinutes = filmBuilder.durationInMinutes;
+        this.fileId = filmBuilder.fileId;
     }
 
     public int getId() {
@@ -118,5 +117,59 @@ public class Film {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    public static class FilmBuilder {
+        private int id;
+        private String name;
+        private String description;
+        private int year;
+        private int genreId;
+        private int minimalAge;
+        private int durationInMinutes;
+        private int fileId;
+        public FilmBuilder addId(int id) {
+            this.id = id;
+            return this;
+        }
+
+        public FilmBuilder addName(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public FilmBuilder addDescription(String description) {
+            this.description = description;
+            return this;
+        }
+
+        public FilmBuilder addYear(int year) {
+            this.year = year;
+            return this;
+        }
+
+        public FilmBuilder addGenreId(int genreId) {
+            this.genreId = genreId;
+            return this;
+        }
+
+        public FilmBuilder addMinimalAge(int minimalAge) {
+            this.minimalAge = minimalAge;
+            return this;
+        }
+
+        public FilmBuilder addDurationInMinutes(int durationInMinutes) {
+            this.durationInMinutes = durationInMinutes;
+            return this;
+        }
+
+        public FilmBuilder addFileId(int fileId) {
+            this.fileId = fileId;
+            return this;
+        }
+
+        public Film build() {
+            return new Film(this);
+        }
     }
 }
